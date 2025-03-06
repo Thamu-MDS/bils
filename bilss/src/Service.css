@@ -1,0 +1,522 @@
+/* General Styles */
+.hero-image {
+  width: 100%;
+  height: 50%;
+  object-fit: cover; /* Ensures the image covers the section without distorting */
+}
+
+.hero-content {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+  padding-right: 90px;
+  background-color: transparent;
+  animation: fadeIn 2s ease-out;
+}
+
+.black-text {
+  color: rgb(255, 255, 255);
+  font-family: "Merriweather", serif;
+}
+
+.yellow-text {
+  margin-left: 10px;
+  color: rgb(247, 164, 9);
+  font-family: "Merriweather", serif;
+}
+.service-alin{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  animation: slideInUp 1.5s ease-out;
+}
+
+.hero p {
+  font-size: 1rem;
+  font-family: "Redressed", cursive;
+  animation: slideInUp 2s ease-out;
+}
+
+.divider {
+  width: 100%;
+  height: 0px;
+  margin: 3px 0;
+}
+
+.container1,
+.container2,
+.container3,
+.container4,
+.container5,
+.container6,
+.container7 {
+  top: 0%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(146, 145, 145, 0.1);
+  padding: 30px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Grid Containers */
+.container1:hover,
+.container2:hover,
+.container3:hover,
+.container4:hover,
+.container5:hover,
+.container6:hover,
+.container7:hover {
+  transform: translateY(-10px); /* Smooth hover effect */
+}
+
+/* Right content animation */
+.right-content1,
+.right-content2,
+.right-content3,
+.right-content4,
+.right-content5,
+.right-content6,
+.right-content7 {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeInRight 1.5s ease-out; /* Custom animation for right content */
+}
+
+/* Adjust h1 and p styles */
+.right-content1 h1,
+.right-content2 h1,
+.right-content3 h1,
+.right-content4 h1,
+.right-content5 h1,
+.right-content6 h1,
+.right-content7 h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.right-content1 p,
+.right-content2 p,
+.right-content3 p,
+.right-content4 p,
+.right-content5 p,
+.right-content6 p,
+.right-content7 p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* Keyframes for the right content animation */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); /* Start off-screen from the right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at its original position */
+  }
+}
+
+/* Add a delay for each section to create a staggered effect */
+.right-content1 {
+  animation-delay: 0.2s;
+}
+
+.right-content2 {
+  animation-delay: 0.4s;
+}
+
+.right-content3 {
+  animation-delay: 0.6s;
+}
+
+.right-content4 {
+  animation-delay: 0.8s;
+}
+
+.right-content5 {
+  animation-delay: 1s;
+}
+
+.right-content6 {
+  animation-delay: 1.2s;
+}
+
+.right-content7 {
+  animation-delay: 1.4s;
+}
+
+
+.know-more-btn1,
+.know-more-btn2,
+.know-more-btn3,
+.know-more-btn4,
+.know-more-btn5,
+.know-more-btn6,
+.know-more-btn7 {
+  background-color: white;
+  border: 2px solid black; /* Black border */
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none; /* Remove underline from anchor tag */
+  display: inline-block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.know-more-btn1:hover,
+.know-more-btn2:hover,
+.know-more-btn3:hover,
+.know-more-btn4:hover,
+.know-more-btn5:hover,
+.know-more-btn6:hover,
+.know-more-btn7:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Styling for the Book Now button */
+.book-now-btn1,
+.book-now-btn2,
+.book-now-btn3,
+.book-now-btn4,
+.book-now-btn5,
+.book-now-btn6,
+.book-now-btn7 {
+  background: radial-gradient(#3F81CD, #683FEA);
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none; /* Remove underline from anchor tag */
+  display: inline-block;
+  border-radius: 0px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+  margin-left: 30px;
+}
+.service-bridimg{
+  height: 40rem;
+  width: 50rem;
+  background-color: #683FEA;
+}
+
+
+/* Left content animation */
+.left-content1,
+.left-content2,
+.left-content3,
+.left-content4,
+.left-content5,
+.left-content6,
+.left-content7 {
+  margin-left: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeInLeft 1.5s ease-out; /* Custom animation for left content */
+}
+
+/* Adjust h1 and p styles */
+.left-content1 h1,
+.left-content2 h1,
+.left-content3 h1,
+.left-content4 h1,
+.left-content5 h1,
+.left-content6 h1,
+.left-content7 h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.left-content1 p,
+.left-content2 p,
+.left-content3 p,
+.left-content4 p,
+.left-content5 p,
+.left-content6 p,
+.left-content7 p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* Keyframes for the left content animation */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); /* Start off-screen from the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at its original position */
+  }
+}
+
+/* Add a delay for each section to create a staggered effect */
+.left-content1 {
+  animation-delay: 0.2s;
+}
+
+.left-content2 {
+  animation-delay: 0.4s;
+}
+
+.left-content3 {
+  animation-delay: 0.6s;
+}
+
+.left-content4 {
+  animation-delay: 0.8s;
+}
+
+.left-content5 {
+  animation-delay: 1s;
+}
+
+.left-content6 {
+  animation-delay: 1.2s;
+}
+
+.left-content7 {
+  animation-delay: 1.4s;
+}
+
+.left-img1,
+.left-img2,
+.left-img3,
+.left-img4,
+.left-img5,
+.left-img6,
+.left-img7 {
+  margin-left: 5%;
+  max-width: 100%;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.left-img1 img,
+.left-img2 img,
+.left-img3 img,
+.left-img4 img,
+.left-img5 img,
+.left-img6 img,
+.left-img7 img {
+  width: 60%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Image hover zoom effect */
+.left-img1 img:hover,
+.left-img2 img:hover,
+.left-img3 img:hover,
+.left-img4 img:hover,
+.left-img5 img:hover,
+.left-img6 img:hover,
+.left-img7 img:hover {
+  transform: scale(1.05);
+}
+/* Right Image Section */
+.right-img1,
+.right-img2,
+.right-img3,
+.right-img4,
+.right-img5,
+.right-img6,
+.right-img7 {
+  margin-left: 10%;
+  max-width: 100%;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Styling for img tags within the right image section */
+.right-img1 img,
+.right-img2 img,
+.right-img3 img,
+.right-img4 img,
+.right-img5 img,
+.right-img6 img,
+.right-img7 img {
+  width: 60%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Image hover zoom effect for the right section */
+.right-img1 img:hover,
+.right-img2 img:hover,
+.right-img3 img:hover,
+.right-img4 img:hover,
+.right-img5 img:hover,
+.right-img6 img:hover,
+.right-img7 img:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .container1,
+  .container2,
+  .container3,
+  .container4,
+  .container5,
+  .container6,
+  .container7 {
+      grid-template-columns: 1fr; /* Stack columns on smaller screens */
+      gap: 20px; /* Adjust gap for smaller screens */
+  }
+  .hero img{
+    height: 15rem;
+    background-color: #683FEA;
+  }
+
+  .hero h1 {
+    margin-top: -58%;
+      font-size: 2.2rem; /* Smaller heading */
+  }
+
+  .hero p {
+      font-size: 0.9rem; /* Smaller paragraph */
+  }
+
+  .right-content1 h1,
+  .right-content2 h1,
+  .right-content3 h1,
+  .right-content4 h1,
+  .right-content5 h1,
+  .right-content6 h1,
+  .right-content7 h1 {
+      font-size: 1.8em; /* Smaller heading */
+  }
+
+  .right-content1 p,
+  .right-content2 p,
+  .right-content3 p,
+  .right-content4 p,
+  .right-content5 p,
+  .right-content6 p,
+  .right-content7 p {
+      font-size: 1em; /* Smaller paragraph */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+      font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  .hero p {
+      font-size: 0.8rem; /* Further reduce paragraph size */
+  }
+
+  .know-more-btn1,
+  .know-more-btn2,
+  .know-more-btn3,
+  .know-more-btn4,
+  .know-more-btn5,
+  .know-more-btn6,
+  .know-more-btn7 {
+      font-size: 14px; /* Smaller button text */
+  }
+
+  .book-now-btn1,
+  .book-now-btn2,
+  .book-now-btn3,
+  .book-now-btn4,
+  .book-now-btn5,
+  .book-now-btn6,
+  .book-now-btn7 {
+      font-size: 14px; /* Smaller button text */
+  }
+
+  .left-img1 img,
+  .left-img2 img,
+  .left-img3 img,
+  .left-img4 img,
+  .left-img5 img,
+  .left-img6 img,
+  .left-img7 img {
+      width: 100%; /* Full width for images */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+      font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  .hero p {
+      font-size: 0.7rem; /* Further reduce paragraph size */
+  }
+
+  .know-more-btn1,
+  .know-more-btn2,
+  .know-more-btn3,
+  .know-more-btn4,
+  .know-more-btn5,
+  .know-more-btn6,
+  .know-more-btn7 {
+      padding: 8px 15px; /* Smaller button padding */
+  }
+
+  .book-now-btn1,
+  .book-now-btn2,
+  .book-now-btn3,
+  .book-now-btn4,
+  .book-now-btn5,
+  .book-now-btn6,
+  .book-now-btn7 {
+      padding: 8px 15px; /* Smaller button padding */
+  }
+}
+
+/* Animation for Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation for Slide In */
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

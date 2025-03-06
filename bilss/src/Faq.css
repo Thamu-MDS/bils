@@ -1,0 +1,176 @@
+/* Container for the grid (centering the grid box) */
+.grid-containerf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    background-color: transparent;
+    width: 100%;
+}
+
+/* The main grid box that contains all the headings (aligned in a row) */
+.grid-boxf {
+    display: flex;
+    flex-direction: column; /* Arrange the headings vertically */
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling each grid item (heading and button) */
+.grid-itemf {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    border: 2px solid #000000;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Heading section with icon */
+.heading-sectionf {
+    display: flex;
+    justify-content: space-between; /* Align heading to the left and button to the right */
+    align-items: center;
+    width: 100%; /* Make sure it takes up 100% width */
+}
+
+.heading-sectionf h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%; /* Heading takes full width */
+}
+
+.toggle-buttonf {
+    border-radius: 50%;
+    background-color: rgb(255, 212, 159);
+    border: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.toggle-buttonf:hover {
+    color: #0056b3;
+}
+
+/* Content section, initially hidden */
+.content {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ff0000;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+/* Show the content when the heading is active */
+.grid-itemf .content {
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .grid-boxf {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+
+    .grid-itemf {
+        padding: 15px; /* Increase padding for better touch targets */
+    }
+
+    .heading-sectionf h2 {
+        font-size: 1.1rem; /* Slightly smaller heading */
+    }
+
+    .toggle-buttonf {
+        height: auto;
+        width: auto;
+        font-size: 0.7rem; /* Smaller button text */
+    }
+}
+
+@media (max-width: 992px) {
+    .grid-boxf {
+        width: 95%; /* Full width on smaller screens */
+    }
+
+    .grid-itemf {
+        padding: 12px; /* Adjust padding */
+    }
+
+    .heading-sectionf h2 {
+        font-size: 1rem; /* Further reduce heading size */
+    }
+
+    .toggle-buttonf {
+        height: auto;
+        width: auto;
+        font-size: 0.6rem; /* Further reduce button text */
+    }
+
+    .content {
+        font-size: 0.9rem; /* Smaller content text */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-containerf {
+        height: auto; /* Allow height to adjust */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .grid-boxf {
+        padding: 15px; /* Adjust padding */
+    }
+
+    .grid-itemf {
+        margin-bottom: 5px; /* Reduce margin */
+    }
+
+    .heading-sectionf h2 {
+        font-size: 0.9rem; /* Further reduce heading size */
+    }
+
+    .toggle-buttonf {
+        height: auto;
+        width: auto;
+        font-size: 0.7rem; /* Further reduce button text */
+    }
+
+    .content {
+        font-size: 0.8rem; /* Smaller content text */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-boxf {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .grid-itemf {
+        margin-bottom: 5px; /* Reduce margin */
+    }
+
+    .heading-sectionf h2 {
+        font-size: 0.8rem; /* Further reduce heading size */
+    }
+
+    .toggle-buttonf {
+        border-radius: 100%;
+        font-size: 0.4rem; 
+        border-radius: 50%;
+        color: #ff0000;/* Further reduce button text */
+    }
+
+    .content {
+        font-size: 0.7rem; /* Smaller content text */
+    }
+}

@@ -1,0 +1,549 @@
+/* General Home Page Styles */
+.home-container {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section Styles */
+.abtbg {
+  background-color: aqua;
+  position: relative;
+  height: 15rem; /* section takes up 15rem of height */
+  overflow: hidden;
+  width: 100%;
+}
+
+.abtbg-image {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover; /* Ensures the image covers the section without distorting */
+}
+
+.abtbg-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+  padding: 20px;
+}
+
+.abtbg h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.abtbg p {
+  font-size: 1.5rem;
+}
+
+/* Content Section Styles */
+.content {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.abtbg p {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.abtbg ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.abtbg li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  width: 20%;
+  background-color: #f2f2f2;
+  margin: 10px;
+  text-align: center;
+}
+
+.chooseus {
+  background-image: url('');
+  background-size: cover;
+  background-position: left;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.getstarted {
+  background-image: url('src/assets/abi project/getstartbg1.png');
+  background-position: center;
+  background-size: 100% 100vh;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  color: #161515;
+  text-align: justify;
+}
+
+.getstarted-button {
+  align-items: end;
+}
+
+/* GridLayout.css */
+.abts2 {
+  gap: 20rem;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.abts2text {
+  margin-left: 10%;
+  font-size: 2rem;
+  width: 55rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.abts2text p {
+  font-size: 1.8rem;
+  font-family: Courier, monospace;
+  font-weight: bold;
+
+
+}
+/* Base Style for the Button */
+.abts2-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: #04003b; /* Blue background */
+  border: 2px solid #050031;
+  border-radius: 30px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button Hover Effects */
+.abts2-btn:hover {
+  background-color: #fff;
+  color: #007bff; /* Change text color on hover */
+  border-color: #00043b; /* Keep border color same as text */
+}
+
+/* Animated Hover Effect */
+.abts2-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: #f7c108; /* Gold color for animation */
+  transition: all 0.4s ease-in-out;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.abts2-btn:hover::before {
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Animated Text Effect on Hover */
+.abts2-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.abts2-btn:hover span {
+  animation: textMove 0.6s forwards;
+}
+
+/* Keyframe for text animation */
+@keyframes textMove {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Slight upward movement */
+  }
+  100% {
+    transform: translateY(0); /* Return to original position */
+  }
+}
+
+
+.abts2text b {
+  color: rgb(247, 204, 87);
+  font-weight: bolder;
+}
+
+.abts2video {
+  
+  height: 20rem;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.abts2video video {
+  height: 50vh;
+  width: 50rem;
+}
+
+
+
+/* Grid Layout */
+.abts3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+  gap: 20px;
+  padding: 40px 20px;
+  justify-items: center; /* Center align grid items */
+}
+
+/* Styling for each grid item */
+.abts3item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(50px); /* Start below */
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* Image Container - Top Half */
+.abts3image-container {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.abts3image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Text Content - Bottom Half */
+.abts3text {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.abts3item h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+
+.abts3item p{
+  margin-left: 40px;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.5;
+}
+/* Image Hover Effect */
+.abts3item:hover .abts3image {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Hover Effect for Heading */
+.abts3item:hover .abts3text h2 {
+  color: #f7c108; /* Change heading color on hover */
+}
+
+/* Animation for the Items */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delay animation for each item to make them staggered */
+.abts3item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.abts3item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.abts3item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .abts3 {
+    grid-template-columns: 1fr; /* Stack items on smaller screens */
+    gap: 20px;
+  }
+
+  .abts3image {
+    height: 60%; /* Image takes more height on mobile */
+  }
+
+  .abts3text {
+    padding-top: 10px;
+  }
+
+  .abts3item {
+    width: 90%;
+    padding: 20px;
+    opacity: 1;
+    transform: translateY(0); /* No animation on mobile for better performance */
+  }
+}
+
+
+.ourstoryheading {
+  align-items: center;
+  text-align: center;
+}
+
+.ourstoryheading b {
+  color: #e0c73a;
+}
+
+/* Updated Our Story Section Styles */
+.ourstory {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ 
+  padding: 20px;
+
+  animation: fadeIn 1.8s ease-in-out;
+  gap: 20px; /* Added space between the two items */
+}
+
+.ourstorytext {
+  font-family: 'Courier New', Courier, monospace;
+  flex-basis: 50%;
+  font-size: 1.5rem; /* Default font size */
+  padding-right: 20px;
+  line-height: 1.6;
+  max-width: 40%;
+}
+
+.ourstoryphoto {
+  flex-basis: 50%;
+  width: 40rem;
+  height: 30rem;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.ourstoryphoto img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ourstoryphoto img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .ourstory {
+    flex-direction: column; /* Stack the items vertically on medium screens */
+  }
+
+  .ourstorytext {
+    font-size: 1.2rem; /* Adjust text size for medium screens */
+    padding-right: 0;
+    padding-bottom: 20px; /* Add some space between the text and image */
+  }
+
+  .ourstoryphoto {
+    flex-basis: 100%; /* Full width for images */
+    margin-top: 20px; /* Add spacing between text and image */
+  }
+
+  .ourstoryphoto img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .ourstory {
+    padding: 15px; /* Add more padding on small screens */
+  }
+
+  .ourstorytext {
+    font-size: 1.1rem; /* Smaller text on mobile screens */
+  }
+
+  .ourstoryphoto img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .ourstory {
+    padding: 10px; /* Reduce padding on very small screens */
+  }
+
+  .ourstorytext {
+    font-size: 1rem; /* Further decrease text size on small devices */
+  }
+
+  .ourstoryphoto img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  height: 100px;
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.abts5 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+  height: 3rem;
+}
+
+.abts5box {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .abts2 {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    gap: 10rem; /* Adjust gap for smaller screens */
+  }
+
+  .abts3 {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+
+  .abts5 {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+
+  .ourstorytext {
+    max-width: 1000px;
+    background-color: #a7973c;
+    font-size: 20px; /* Decrease text size on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .abtbg h1 {
+    font-size: 2.5rem; /* Smaller heading */
+  }
+
+  .abtbg p {
+    width: 470px;
+    font-size: 1rem; /* Smaller paragraph */
+  }
+
+  .abts2text {
+
+    width: 80%; /* Full width on smaller screens */
+  }
+
+  .abts3 {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+
+  .manwithphototext {
+    padding-left: 5%; /* Adjust padding */
+    padding-top: 5rem; /* Adjust padding */
+  }
+
+  .manwithphototext p {
+    padding-top: 60%;
+ 
+    font-size: 1rem; /* Smaller text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .abtbg h1 {
+    font-size: 2rem; /* Further reduce heading size */
+  }
+
+  .abtbg p {
+    background-color: #007bff;
+    font-size: 1rem; /* Further reduce paragraph size */
+  }
+
+  .abts3item {
+    height: auto; /* Allow height to adjust */
+  }
+
+  .manwithphotobutton {
+    width: 100%; /* Full width for buttons */
+  }
+
+  .ourstorytext {
+    background-color: #bebebd;
+    font-size: 5px; /* Further decrease text size */
+  }
+}

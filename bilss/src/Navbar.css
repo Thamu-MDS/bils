@@ -1,0 +1,121 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+/* Logo - left side */
+.logo {
+  flex: 1;
+}
+
+.img1 {
+  height: 70px;
+  width: 130px;
+  cursor: pointer;
+
+}
+
+/* Navigation Links - center */
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex: 2;
+  justify-content: center;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+}
+
+/* Button - right side */
+.button-container {
+  flex: 1;
+  text-align: right;
+}
+
+.contact-button {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #e07b00;
+}
+
+/* Burger Menu (For mobile screens) */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 300px;
+}
+
+.burger-menu div {
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Mobile layout */
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .button-container {
+    display: none; /* Hide button on mobile */
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+}
