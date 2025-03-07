@@ -31,8 +31,14 @@ const About = () => {
   
 
      
+<div className='whychooseus'>
+   <h1>
+        Why Choose <b>Us </b>?
+      </h1>
+</div>
 
     <div className="abts3">
+     
       <div className="abts3item">
         <img src="src/assets/img/meet2.jpeg" alt="Image 1" className="abts3image" />
         <h2>Personalized Service</h2>
@@ -56,7 +62,7 @@ const About = () => {
         <div className='ourstorytext'>
           
           <p >
-            From  Dreams to Reality Our journey began with a simple dream: to create unforgettable experiences that bring people together and leave lasting memories. With a passion for event planning and a commitment to excellence, our founders set out to build an event management company that stands out in the industry
+            <b> From Dreams to Reality </b>Our journey began with a simple dream: to create unforgettable experiences that bring people together and leave lasting memories. With a passion for event planning and a commitment to excellence, our founders set out to build an event management company that stands out in the industry
           </p></div>
         <div className='ourstoryphoto'>
 
@@ -93,18 +99,12 @@ const About = () => {
         </div>
       </div>
     </div>
-    
-    <div className="manwithphoto">
-    <div className="manwithphototext">
-    <p>Make Your Occasion Extraordinary – Book with Us Today</p>
-    
-    <button className="manwithphotobutton">Sign Up</button>
-      </div>
-
+    <br></br>
+  
     </div>
+    
 
 
-    </div>
   );
 };
 

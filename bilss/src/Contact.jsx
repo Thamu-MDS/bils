@@ -122,7 +122,7 @@ const Contact = () => {
             </div>
 
             <button type="submit" className="submit-btn">
-              Send
+              Send Message
             </button>
           </form>
         </div>
@@ -153,7 +153,7 @@ const Contact = () => {
           </div>
 
           <div className="social-media-section">
-            <h3>Follow Us</h3>
+            <h3>Stay Connected</h3>
             <div className="social-icons">
               <a href="#" target="_blank" rel="noopener noreferrer">
                 <img
@@ -163,7 +163,7 @@ const Contact = () => {
                   height="30"
                 />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/blissfuloccasion_/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer">
                 <img
                   src="src/assets/img/social2.png"
                   alt="Twitter"
