@@ -13,6 +13,9 @@ const Contact = () => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({});
+
+  // Handle form field changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -28,29 +31,44 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  // Form submission handler
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:5000/api/contact", formData)
-      .then((response) => {
-        alert(response.data);
-        setFormData({
-          firstName: "",
-          lastName: "",
-          phone: "",
-          email: "",
-          message: "",
-        });
-      })
-      .catch((error) => {
-        console.error("There was an error submitting the form!", error);
+    
+    // Simple validation for required fields
+    let formErrors = {};
+    if (!formData.firstName) formErrors.firstName = "First name is required.";
+    if (!formData.lastName) formErrors.lastName = "Last name is required.";
+    if (!formData.phone) formErrors.phone = "Phone number is required.";
+    if (!formData.email) formErrors.email = "Email is required.";
+    if (!formData.message) formErrors.message = "Message is required.";
+    
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);  // Show validation errors
+      return;
+    }
+
+    try {
+      const response = await axios.post("http://localhost:5000/api/contact", formData);
+      alert(response.data.message);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        message: "",
       });
+      setErrors({}); // Reset errors if successful
+    } catch (error) {
+      console.error("There was an error submitting the form!", error);
+      alert("There was an error submitting your message. Please try again.");
+    }
   };
 
   return (
     <div className="contact-body">
       <div className="grid-contact">
-        <div className="content-box">  
+        <div className="content-box">
           <h1>Contact <b>Us</b></h1>
           <img src="src/assets/img/contactheadimg.jpg" alt="" className="cantact-head-img" />
         </div>
@@ -71,6 +89,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                 />
+                {errors.firstName && <span className="error">{errors.firstName}</span>}
               </label>
               <label htmlFor="lastName">
                 Last Name*
@@ -82,6 +101,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                 />
+                {errors.lastName && <span className="error">{errors.lastName}</span>}
               </label>
             </div>
 
@@ -96,6 +116,7 @@ const Contact = () => {
                   placeholder="Phone Number"
                   required
                 />
+                {errors.phone && <span className="error">{errors.phone}</span>}
               </label>
               <label htmlFor="email">
                 E-Mail*
@@ -107,6 +128,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                 />
+                {errors.email && <span className="error">{errors.email}</span>}
               </label>
             </div>
 
@@ -119,10 +141,11 @@ const Contact = () => {
                 onChange={handleChange}
                 required
               />
+              {errors.message && <span className="error">{errors.message}</span>}
             </div>
 
             <button type="submit" className="submit-btn">
-              Send Message
+              Send
             </button>
           </form>
         </div>
@@ -153,7 +176,7 @@ const Contact = () => {
           </div>
 
           <div className="social-media-section">
-            <h3>Stay Connected</h3>
+            <h3>Follow Us</h3>
             <div className="social-icons">
               <a href="#" target="_blank" rel="noopener noreferrer">
                 <img
@@ -163,7 +186,7 @@ const Contact = () => {
                   height="30"
                 />
               </a>
-              <a href="https://www.instagram.com/blissfuloccasion_/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 <img
                   src="src/assets/img/social2.png"
                   alt="Twitter"

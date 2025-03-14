@@ -1018,3 +1018,142 @@
 .left-side .image {
   animation-delay: 1s;
 }
+
+/* For screens with a max width of 700px */
+@media (max-width: 700px) {
+  /* Adjust card layout */
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card1,
+  .product-card2,
+  .product-card3 {
+    width: 100%; /* Make the cards full width on smaller screens */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 16px; /* Adjust title font size */
+  }
+
+  .card-description {
+    font-size: 14px; /* Adjust description font size */
+  }
+
+  .card-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .book-now,
+  .view-more {
+    width: 100%; /* Make buttons full width */
+  }
+
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-side,
+  .right-side {
+    max-width: 100%;
+  }
+
+  .right-side p {
+    font-size: 1rem; /* Adjust text size on smaller screens */
+  }
+}
+
+/* For screens with a max width of 400px */
+@media (max-width: 400px) {
+  /* Adjust card layout for very small screens */
+  .cards-container {
+    padding: 10px;
+  }
+
+  .product-card1,
+  .product-card2,
+  .product-card3 {
+    width: 100%; /* Make cards full width */
+    height: auto; /* Let the cards adjust height */
+    margin-left: 0; /* Remove any left margin */
+  }
+
+  .card-title {
+    font-size: 14px; /* Further reduce title size */
+  }
+
+  .card-description {
+    font-size: 12px; /* Further reduce description size */
+  }
+
+  .card-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .book-now,
+  .view-more {
+    font-size: 0.9rem; /* Smaller buttons for tiny screens */
+    padding: 8px 0;
+  }
+
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-side,
+  .right-side {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .right-side p {
+    font-size: 0.9rem; /* Further reduce font size for smaller screens */
+  }
+
+  .heading {
+    font-size: 2rem; /* Smaller heading */
+  }
+
+  /* Grid layout changes for very small screens */
+  .grid-containerp {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-boxp,
+  .right-boxp {
+    width: 100%; /* Full width for both content and button */
+  }
+
+  .buttonp {
+    font-size: 1rem; /* Slightly smaller button text */
+    width: 100%; /* Full width for button */
+  }
+
+  .grid-boxf {
+    width: 100%; /* Make the grid box take full width */
+  }
+
+  .grid-itemf {
+    padding: 10px;
+    font-size: 0.8rem; /* Adjust content text size */
+  }
+
+  .heading-sectionf h2 {
+    font-size: 0.8rem; /* Smaller heading */
+  }
+
+  .content {
+    font-size: 0.7rem; /* Smaller content text */
+  }
+}

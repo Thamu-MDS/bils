@@ -1,0 +1,129 @@
+// Navbar.scss
+
+$primary-color: #2c3e50;
+$hover-color: #3498db;
+$transition-time: 0.3s;
+$navbar-height: 60px;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-height: $navbar-height;
+  z-index: 1000; // Ensure navbar stays on top
+
+  .logo {
+    z-index: 1001; // Keep logo above mobile menu
+    img.img1 {
+      height: 40px;
+      width: auto;
+      max-width: 150px; // Prevent logo from growing too large
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: all $transition-time ease-in-out;
+
+    li {
+      a {
+        text-decoration: none;
+        color: $primary-color;
+        font-weight: 500;
+        transition: color $transition-time ease;
+
+        &:hover {
+          color: $hover-color;
+        }
+      }
+    }
+
+    // Mobile menu styles
+    @media (max-width: 768px) {
+      position: fixed;
+      top: $navbar-height;
+      left: 0;
+      right: 0;
+      
+      background-color: white;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transform: translateX(100%);
+      transition: transform $transition-time ease-in-out;
+      z-index: 999; // Below logo but above content
+      overflow-y: auto;
+
+      &.active {
+        transform: translateX(0);
+      }
+
+      li a {
+        font-size: 1.1rem;
+        padding: 1rem;
+      }
+    }
+  }
+
+  .button-container {
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    .contact-button {
+      background-color: $hover-color;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color $transition-time ease;
+
+      &:hover {
+        background-color: darken($hover-color, 10%);
+      }
+    }
+  }
+
+  .burger-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 1001; // Keep burger above all elements
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      div {
+        width: 25px;
+        height: 3px;
+        background-color: $primary-color;
+        transition: all $transition-time ease;
+      }
+
+      // Animated X when active
+      &.active {
+        div:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+        div:nth-child(2) {
+          opacity: 0;
+        }
+        div:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+        }
+      }
+    }
+  }
+}
+
