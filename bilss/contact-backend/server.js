@@ -104,3 +104,9 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
+
+//  npm install -D sass-embedded 
+//  npm install mongodb@5.5     
+// npm install express body-parser mongoose dotenv cors nodemailer
+// cd contact-backend
+//  node server.js   
